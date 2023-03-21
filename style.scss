@@ -1,0 +1,76 @@
+@use "_reset.scss";
+
+$primary-900:hsl(0, 0%, 100%);
+$primary-800:hsl(212, 45%, 89%);
+$primary-700:hsl(220, 15%, 55%);
+$primary-600:hsl(218, 44%, 22%);
+
+body{
+    font-size: 16px;
+    font-family: 'Outfit', sans-serif;
+    display: grid;
+    place-items: center;
+    background-color: $primary-800;
+}
+
+main{
+    display: grid;
+    place-items: center;
+}
+
+.contentWrapper{
+    padding: 1rem;
+    background-color: $primary-900;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    border-radius: 15px;
+    align-items: center;
+    gap: 1.5rem;
+    width: 80vw;
+    
+    img{
+        object-fit: scale-down;
+        
+        border-radius: 15px;
+        width: 100%;
+    }
+    h1{
+        color: $primary-600;
+        max-width: 18ch;
+        font-size: clamp(1rem, 5vw, 2rem);
+    }
+    p{
+        color: $primary-700;
+        max-width: 25ch;
+        padding-bottom: 1rem;
+        font-size: clamp(0.75rem, 3.5vw, 1.25rem);
+    }
+}
+
+
+@media only screen and (min-width:500px){
+    .contentWrapper{
+        width: calc(10vw - 2rem);
+        min-width: 400px;
+        h1{
+            
+            font-size: clamp(1.75rem, 2.5vw, 2rem);
+        }
+        p{
+            
+            font-size: clamp(1.125rem, 1.75vw, 1.5rem);
+        }
+    }
+}
+
+
+@media only screen and (min-width:800px){
+    .contentWrapper{
+        p{
+            
+            font-size: clamp(1rem, 1.5vw, 1.25rem);
+        }
+    }
+    
+}
